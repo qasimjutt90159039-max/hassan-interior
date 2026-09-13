@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFFFFF;
+    color: #222222;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: #E8E1D9;
+    color: #111111;
+  }
+}
+
+/* Architectural grid line details */
+.arch-grid-line {
+  background-color: #E5E5E2;
+}
+
+.arch-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+/* Custom interactive hover underline */
+.hover-editorial-line {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-editorial-line::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #111111;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hover-editorial-line:hover::after {
+  width: 100%;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
