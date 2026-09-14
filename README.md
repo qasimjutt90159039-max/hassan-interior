@@ -123,3 +123,21 @@ npm run build
 ```bash
 cd server && npm test
 ```
+
+---
+
+## 7. Deployment (Vercel & Netlify)
+
+The project includes pre-configured zero-config deployment support for both **Vercel** and **Netlify**.
+
+### Deploying on Vercel:
+1. Push this project to your GitHub repository.
+2. In Vercel, click **Add New Project** and import the repository.
+3. Keep default settings (`vercel.json` automatically sets the build command, output directory `client/dist`, and serverless API rewrites).
+4. Click **Deploy**. Vercel will build and launch the site with 0 errors!
+
+### Deploying on Netlify:
+1. Push this project to your GitHub repository.
+2. In Netlify, click **Add new site** > **Import an existing project**.
+3. Select your repository (`netlify.toml` automatically configures the build command, publish directory `client/dist`, and SPA rewrites).
+4. Click **Deploy**. Netlify will build and deploy the site smoothly!
